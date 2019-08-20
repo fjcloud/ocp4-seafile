@@ -1,6 +1,6 @@
-FROM rhel7-minimal:latest
+FROM ubuntu:16.04
 
-RUN yum update && yum install -y \
+RUN apt update && apt install -y \
     python \
     python2.7 \
     libpython2.7 \
