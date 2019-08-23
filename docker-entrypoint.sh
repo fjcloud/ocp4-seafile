@@ -12,7 +12,7 @@ tail -f $ROOTPATH/logs/controller.log &
 maxretry=4
 retry=0
 
-chown -R 1001:1001 $ROOTPATH/seafile-data
+chown -R 1001:0 $ROOTPATH/seafile-data
 
 while [ "$retry" -le "$maxretry" ]; do
     ps aux | grep seafile-controller | grep -v grep > /dev/null 2> /dev/null || {
