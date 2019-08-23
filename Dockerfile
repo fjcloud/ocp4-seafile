@@ -21,10 +21,6 @@ ENV ROOTPATH=/opt/app-root/src
 ENV INSTALLPATH=$ROOTPATH/seafile-server-latest
 ENV CCNET_CONF_DIR=$ROOTPATH/ccnet
 ENV SEAFILE_CENTRAL_CONF_DIR=$ROOTPATH/conf
-ENV SEAFILE_CONF_DIR=$ROOTPATH/seafile-data
-
-# setup user environment
-VOLUME $SEAFILE_CONF_DIR
 
 RUN wget https://download.seadrive.org/seafile-server_7.0.4_x86-64.tar.gz -O /tmp/seafile-server.tar.gz && \
     tar -C /tmp/ -xzvf /tmp/seafile-server.tar.gz && \
