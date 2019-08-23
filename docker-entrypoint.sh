@@ -18,7 +18,7 @@ while [ "$retry" -le "$maxretry" ]; do
     ps aux | grep seafile-controller | grep -v grep > /dev/null 2> /dev/null || {
         retry=$(expr $retry + 1);
     }
-    sleep 5
+    sleep 1000
 done
 echo "Seafile not running"
 exit 1
