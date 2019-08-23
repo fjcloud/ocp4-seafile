@@ -6,8 +6,6 @@ RUN pip install --upgrade pillow \
     psycopg2-binary \
     pylibmc \
     django-pylibmc
-    
-RUN mkdir /app
 
 # add entrypoints
 ADD setenv.sh /
@@ -19,7 +17,7 @@ ADD docker-entrypoint.sh /
 #ENV LC_ALL=C.UTF-8
 
 # set environment variables for seafile
-ENV ROOTPATH=/app
+ENV ROOTPATH=/opt/app-root/src
 ENV INSTALLPATH=$ROOTPATH/seafile-server-latest
 ENV CCNET_CONF_DIR=$ROOTPATH/ccnet
 ENV SEAFILE_CENTRAL_CONF_DIR=$ROOTPATH/conf
