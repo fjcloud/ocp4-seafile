@@ -29,6 +29,8 @@ RUN wget https://download.seadrive.org/seafile-server_7.0.4_x86-64.tar.gz -O /tm
 RUN rm -rf $INSTALLPATH/seahub/media/avatars
 RUN ln -s $ROOTPATH/seahub-data/avatars $INSTALLPATH/seahub/media/avatars
 
+RUN mkdir $ROOTPATH/seafile-data
+
 RUN chmod +x /opt/app-root/docker-entrypoint.sh
 RUN chmod +x /opt/app-root/setenv.sh
 
