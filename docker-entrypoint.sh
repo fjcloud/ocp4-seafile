@@ -1,6 +1,5 @@
 #!/bin/bash
 source /opt/app-root/setenv.sh
-chown -R 1001:0 /opt/app-root/src/seafile-data
 
 $INSTALLPATH/seafile.sh start
 $INSTALLPATH/seahub.sh start
