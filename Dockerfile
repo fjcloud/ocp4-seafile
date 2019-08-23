@@ -8,8 +8,8 @@ RUN pip install --upgrade pillow \
     django-pylibmc
 
 # add entrypoints
-ADD setenv.sh /
-ADD docker-entrypoint.sh /
+ADD setenv.sh /opt/app-root
+ADD docker-entrypoint.sh /opt/app-root
 
 # set environment variables for locale
 #ENV LANG=C.UTF-8
@@ -33,4 +33,4 @@ RUN wget https://download.seadrive.org/seafile-server_7.0.4_x86-64.tar.gz -O /tm
 RUN rm -rf $INSTALLPATH/seahub/media/avatars
 RUN ln -s $ROOTPATH/seahub-data/avatars $INSTALLPATH/seahub/media/avatars
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/opt/app-root/docker-entrypoint.sh"]
