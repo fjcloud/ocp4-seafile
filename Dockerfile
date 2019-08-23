@@ -1,4 +1,4 @@
-FROM image-registry.openshift-image-registry.svc:5000/seafile-dev/rhel7-minimal
+FROM image-registry.openshift-image-registry.svc:5000/seafile-dev/rhel7-minimal:1-55
 
 RUN pip install --upgrade pillow \
     numpy==1.16.4 \
