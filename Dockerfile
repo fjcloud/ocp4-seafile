@@ -1,4 +1,4 @@
-FROM rhel7-minimal:1-55
+FROM python-36-rhel7:1-55
 
 RUN pip install --upgrade pillow \
     numpy==1.16.4 \
