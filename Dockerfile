@@ -1,4 +1,4 @@
-FROM python-36-rhel7:1-55
+FROM image-registry.openshift-image-registry.svc:5000/openshift/python-36-rhel7:1-55
 
 RUN pip install --upgrade pillow \
     numpy==1.16.4 \
