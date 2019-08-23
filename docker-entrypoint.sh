@@ -1,5 +1,5 @@
 #!/bin/bash
-source setenv.sh
+source /opt/app-root/setenv.sh
 
 $INSTALLPATH/seafile.sh start
 $INSTALLPATH/seahub.sh start
@@ -11,6 +11,8 @@ tail -f $ROOTPATH/logs/controller.log &
 
 maxretry=4
 retry=0
+
+chown -R 1001:1001 $ROOTPATH/seafile-data
 
 while [ "$retry" -le "$maxretry" ]; do
     ps aux | grep seafile-controller | grep -v grep > /dev/null 2> /dev/null || {
