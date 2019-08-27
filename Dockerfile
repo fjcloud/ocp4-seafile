@@ -27,7 +27,7 @@ RUN wget https://download.seadrive.org/seafile-server_7.0.4_x86-64.tar.gz -O /tm
     rm /tmp/seafile-server.tar.gz && \
     mv /tmp/seafile-server-* $INSTALLPATH
 
-RUN sh /opt/app-root/src/seafile-server-latest/setup-seafile.sh auto -n seafile-ocp -i seafile.apps.ocp.msl.cloud -p 8083 -d /opt/app-root/src/seafile-data/
+RUN sh /opt/app-root/src/seafile-server-latest/setup-seafile.sh auto -n seafile-generic -i seafile.generic.apps -p 8083 -d /opt/app-root/src/seafile-data/
 
 RUN chmod +x /opt/app-root/docker-entrypoint.sh
 RUN chmod +x /opt/app-root/setenv.sh
